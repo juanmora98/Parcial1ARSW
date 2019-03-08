@@ -1,0 +1,8 @@
+com\eci\edu\arsw\LibraryAPI\LibraryApiApplication.class
+com\eci\edu\arsw\LibraryAPI\persistence\LibraryPersistence.class
+com\eci\edu\arsw\LibraryAPI\persistence\impl\InMemoryLibraryPersistence.class
+com\eci\edu\arsw\LibraryAPI\controllers\LibraryAPIController.class
+com\eci\edu\arsw\LibraryAPI\model\Libro.class
+com\eci\edu\arsw\LibraryAPI\model\Libreria.class
+com\eci\edu\arsw\LibraryAPI\controllers\ResourceNotFoundException.class
+com\eci\edu\arsw\LibraryAPI\services\LibraryServices.class
