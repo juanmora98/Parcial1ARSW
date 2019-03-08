@@ -19,9 +19,7 @@ public class Libro {
     
     
     
-    public Libro(){
-        
-    }
+
     
     public Libro(String nombre, int id, String autor, String sinopsis){
         this.nombre = nombre;
@@ -33,39 +31,73 @@ public class Libro {
         
     }
     
+  
     
-    public void SetNombre(String nombre){
-        this.nombre = nombre;
-    }
-    
-    public String GetNombre(){
+//    
+//    public void SetNombre(String nombre){
+//        this.nombre = nombre;
+//    }
+//    
+//    public String GetNombre(){
+//        return nombre;
+//    }
+//    
+//    public void SetId(int id){
+//        this.id = id;
+//    }
+//    
+//    public int GetId(){
+//        return id;
+//    }
+//    
+//    
+//    public void SetAutor(String autor){
+//        this.autor = autor;
+//    }
+//    
+//    public String GetAutor(){
+//        return autor;
+//    }
+//    
+//    
+//    public void SetSinopsis(String sinopsis){
+//        this.sinopsis = sinopsis;
+//    }
+//    
+//    public String GetSinopis(){
+//        return sinopsis;
+//    }
+
+    public String getNombre() {
         return nombre;
     }
-    
-    public void SetId(int id){
-        this.id = id;
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
     }
-    
-    public int GetId(){
+
+    public int getId() {
         return id;
     }
-    
-    
-    public void SetAutor(String autor){
-        this.autor = autor;
+
+    public void setId(int id) {
+        this.id = id;
     }
-    
-    public String GetAutor(){
+
+    public String getAutor() {
         return autor;
     }
-    
-    
-    public void SetSinopsis(String sinopsis){
-        this.sinopsis = sinopsis;
+
+    public void setAutor(String autor) {
+        this.autor = autor;
     }
-    
-    public String GetSinopis(){
+
+    public String getSinopsis() {
         return sinopsis;
+    }
+
+    public void setSinopsis(String sinopsis) {
+        this.sinopsis = sinopsis;
     }
     
     

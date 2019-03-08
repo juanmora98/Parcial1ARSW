@@ -1,4 +1,5 @@
 com\eci\edu\arsw\LibraryAPI\LibraryApiApplication.class
+com\eci\edu\arsw\LibraryAPI\persistence\impl\LibraryServiceException.class
 com\eci\edu\arsw\LibraryAPI\persistence\LibraryPersistence.class
 com\eci\edu\arsw\LibraryAPI\persistence\impl\InMemoryLibraryPersistence.class
 com\eci\edu\arsw\LibraryAPI\controllers\LibraryAPIController.class

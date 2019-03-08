@@ -58,13 +58,13 @@ public class InMemoryLibraryPersistence implements LibraryPersistence{
     @Override
     public List<Libro> GetBooksbyLibrarie(Integer id) {
         Libreria libreria = librerias.get(id);
-        return libreria.GetLibros();
+        return libreria.getLibros();
     }
 
     @Override
     public void DeleteLibrary(Integer id) throws LibraryServiceException{
         Libreria libreria = librerias.get(id);
-        if (!libreria.GetLibros().isEmpty()){
+        if (!libreria.getLibros().isEmpty()){
             librerias.remove(id);
         }
         else{
