@@ -7,6 +7,7 @@ package com.eci.edu.arsw.LibraryAPI.persistence;
 
 import com.eci.edu.arsw.LibraryAPI.model.Libreria;
 import com.eci.edu.arsw.LibraryAPI.model.Libro;
+import com.eci.edu.arsw.LibraryAPI.persistence.impl.LibraryServiceException;
 import java.util.List;
 import java.util.Map;
 
@@ -24,5 +25,8 @@ public interface LibraryPersistence {
     public Libreria GetLibrarie(Integer id);
     
     public List<Libro> GetBooksbyLibrarie(Integer id);
+    
+    public void DeleteLibrary(Integer id) throws LibraryServiceException;
+    
     
 }

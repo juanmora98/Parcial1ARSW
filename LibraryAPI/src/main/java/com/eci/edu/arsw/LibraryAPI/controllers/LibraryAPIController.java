@@ -7,6 +7,7 @@ package com.eci.edu.arsw.LibraryAPI.controllers;
 
 import com.eci.edu.arsw.LibraryAPI.model.Libreria;
 import com.eci.edu.arsw.LibraryAPI.model.Libro;
+import com.eci.edu.arsw.LibraryAPI.persistence.impl.LibraryServiceException;
 import com.eci.edu.arsw.LibraryAPI.services.LibraryServices;
 import java.util.Map;
 import java.util.logging.Level;
@@ -72,7 +73,16 @@ public class LibraryAPIController {
     
     }
     
+    @RequestMapping(method = RequestMethod.DELETE)
     
-    
-    
+    public ResponseEntity<?> manejadorDeleteLibreria(@PathVariable int id){
+        try {
+            ls.DeleteLibrary(id);
+            return new ResponseEntity<>(HttpStatus.OK);
+        } catch (LibraryServiceException ex) {
+            Logger.getLogger(LibraryAPIController.class.getName()).log(Level.SEVERE, null, ex);
+            return new ResponseEntity<>(ex.getMessage(), HttpStatus.NOT_FOUND);
+        }
+        
+    }
 }

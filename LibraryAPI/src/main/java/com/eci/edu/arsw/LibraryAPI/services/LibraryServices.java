@@ -8,6 +8,7 @@ package com.eci.edu.arsw.LibraryAPI.services;
 import com.eci.edu.arsw.LibraryAPI.model.Libreria;
 import com.eci.edu.arsw.LibraryAPI.model.Libro;
 import com.eci.edu.arsw.LibraryAPI.persistence.LibraryPersistence;
+import com.eci.edu.arsw.LibraryAPI.persistence.impl.LibraryServiceException;
 import java.util.List;
 import java.util.Map;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -52,6 +53,9 @@ public class LibraryServices {
             return lp.GetBooksbyLibrarie(id);
     }
  
+    public void DeleteLibrary(int id) throws LibraryServiceException{
+        lp.DeleteLibrary(id);
+    }
     
 //    public void CreateFuncionInCinema(String Cinema, CinemaFunction funcion) throws CinemaPersistenceException{
 //        cps.CreateFunctionInCinema(Cinema, funcion);

@@ -12,6 +12,8 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import org.springframework.stereotype.Service;
 
 /**
@@ -58,5 +60,20 @@ public class InMemoryLibraryPersistence implements LibraryPersistence{
         Libreria libreria = librerias.get(id);
         return libreria.GetLibros();
     }
+
+    @Override
+    public void DeleteLibrary(Integer id) throws LibraryServiceException{
+        Libreria libreria = librerias.get(id);
+        if (!libreria.GetLibros().isEmpty()){
+            librerias.remove(id);
+        }
+        else{
+            throw new LibraryServiceException("La libreria tiene libros, no se puede eliminar");
+        }
+             
+
+    }
+    
+    
     
 }
