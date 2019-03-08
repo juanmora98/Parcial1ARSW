@@ -19,7 +19,7 @@ public interface LibraryPersistence {
     
     public void saveLibrarie(Integer id, Libreria libreria);
     
-    public Map<String,Libreria> GetLibraries();
+    public Map<Integer,Libreria> GetLibraries();
     
     public Libreria GetLibrarie(Integer id);
     

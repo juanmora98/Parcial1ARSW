@@ -34,7 +34,7 @@ public class LibraryServices {
     
     
     
-    public Map<String,Libreria> getAllLibraries(){
+    public Map<Integer,Libreria> getAllLibraries(){
         return lp.GetLibraries();
     }
     

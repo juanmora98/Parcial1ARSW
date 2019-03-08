@@ -22,7 +22,7 @@ import org.springframework.stereotype.Service;
 public class InMemoryLibraryPersistence implements LibraryPersistence{
 
     //Atributos
-     private final Map<String,Libreria> librerias=new HashMap<>();
+     private final Map<Integer,Libreria> librerias=new HashMap<>();
     
      
     public InMemoryLibraryPersistence(){
@@ -32,7 +32,7 @@ public class InMemoryLibraryPersistence implements LibraryPersistence{
         libros.add(libro1);
         //functions.add(funct2);
         Libreria l =new Libreria("santoto", 1, "ananana", "43432424", libros);
-        librerias.put("1", l);
+        librerias.put(1, l);
 
     } 
     
@@ -40,25 +40,23 @@ public class InMemoryLibraryPersistence implements LibraryPersistence{
     
     @Override
     public void saveLibrarie(Integer id, Libreria libreria) {
-//        librerias.put(id, libreria);
+        librerias.put(id, libreria);
     }
 
     @Override
-    public Map<String, Libreria> GetLibraries() {
+    public Map<Integer, Libreria> GetLibraries() {
         return librerias;
     }
 
     @Override
     public Libreria GetLibrarie(Integer id) {
-        //return librerias.get(id);
-        return null;
+        return librerias.get(id);
     }
 
     @Override
     public List<Libro> GetBooksbyLibrarie(Integer id) {
-//        Libreria libreria = librerias.get(id);
-//        return libreria.GetLibros();
-           return null;
+        Libreria libreria = librerias.get(id);
+        return libreria.GetLibros();
     }
     
 }

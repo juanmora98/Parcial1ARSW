@@ -15,7 +15,7 @@ public class Libreria {
     
     //Atributos
     private String nombre;
-    private Integer id;
+    private int id;
     private String direccion;
     private String telefono;
     private List<Libro> libros;
@@ -23,7 +23,7 @@ public class Libreria {
     
     public Libreria(){}
     
-    public Libreria(String nombre, Integer id, String direccion, String telefono, List<Libro> libros){
+    public Libreria(String nombre, int id, String direccion, String telefono, List<Libro> libros){
         this.nombre = nombre;
         this.id = id;
         this.direccion = direccion;
@@ -42,7 +42,7 @@ public class Libreria {
         return nombre;
     }
     
-    public void SetId(Integer id){
+    public void SetId(int id){
         this.id = id;
     }
     

@@ -27,6 +27,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 
 @RestController
+@Service
 @RequestMapping(value = "/Libraries")
 public class LibraryAPIController {
     
@@ -39,7 +40,7 @@ public class LibraryAPIController {
     public ResponseEntity<?> manejadorGetLibraries(){
         try {
             
-            Map<String,Libreria> librerias = ls.getAllLibraries();
+            Map<Integer,Libreria> librerias = ls.getAllLibraries();
             //obtener datos que se enviarán a través del API
             return new ResponseEntity<>(librerias,HttpStatus.ACCEPTED);
         } catch (Exception ex) {
@@ -59,6 +60,8 @@ public class LibraryAPIController {
         }   
     
     }
+    
+    
     
     
 }
