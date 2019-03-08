@@ -61,6 +61,17 @@ public class LibraryAPIController {
     
     }
     
+    @RequestMapping(value="/{id}/Books",method = RequestMethod.GET)
+    public ResponseEntity<?> manejadorGetLibreriaIdLibros(@PathVariable int id){
+        try {            
+            return new ResponseEntity<>(ls.GetBooksbyLibrarie(id), HttpStatus.ACCEPTED);
+        } catch (Exception e) {
+            Logger.getLogger(LibraryAPIController.class.getName()).log(Level.SEVERE, null, e);            
+            return new ResponseEntity<>("Lo sentimos no existe una libreria con esa id", HttpStatus.NOT_FOUND);
+        }   
+    
+    }
+    
     
     
     
